@@ -421,6 +421,64 @@ function addSocialMedia($style)
 	}
 	echo '</ul>';
 }
+
+function isBlogView(){
+	$args = array(
+		'public'   => true,
+		'_builtin' => false
+	);
+
+	$output = 'names';
+	$operator = 'and';
+	$post_types = get_post_types( $args, $output, $operator ); 
+
+	foreach ( $post_types as $post_type ) 
+	{
+		if(is_singular($post_type) || is_post_type_archive($post_type))
+		{
+			return false;		
+		}
+	}
+	
+	$args = array(
+		'public'   => true,
+		'_builtin' => false
+	);
+
+	$output = 'names';
+	$operator = 'and';
+	$taxonomies = get_taxonomies( $args, $output, $operator ); 
+
+	foreach ( $taxonomies as $taxonomy ) 
+	{
+		if(is_tax($taxonomy))
+		{		
+			return false;		
+		}
+	}
+	
+	
+	if(is_archive() || is_home() || is_single())
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+	
+function isCPTView($cpttocheck)
+{
+	if(is_singular($cpttocheck) || is_post_type_archive($cpttocheck))
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
 //End resuseable code pieces
 
 
