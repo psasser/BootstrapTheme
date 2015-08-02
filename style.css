@@ -197,6 +197,11 @@ a img.aligncenter {
 {
 	opacity: .7;	
 }
+
+.clear
+{
+	clear: both;
+}
 /*End maintenance styling */
 
 
