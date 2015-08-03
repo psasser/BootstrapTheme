@@ -82,7 +82,11 @@ function remove_sidebar()
 {
 	return false; 
 }
-add_filter('thematic_sidebar', 'remove_sidebar');
+//add_filter('thematic_sidebar', 'remove_sidebar');
+
+function replace_last_nav_item($items, $args) {
+	return substr_replace($items, '', strrpos($items, $args->after), strlen($args->after));
+}
 //End Wordpress Maintenance
 
 
