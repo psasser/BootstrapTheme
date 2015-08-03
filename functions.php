@@ -87,6 +87,7 @@ function remove_sidebar()
 function replace_last_nav_item($items, $args) {
 	return substr_replace($items, '', strrpos($items, $args->after), strlen($args->after));
 }
+add_filter('wp_nav_menu','replace_last_nav_item',100,2);
 //End Wordpress Maintenance
 
 
