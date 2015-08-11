@@ -18,6 +18,11 @@ This work, like WordPress, is released under GNU General Public License, version
 */
 
 /*Maintenance styling */
+body
+{
+	min-width: 320px;	
+}
+
 .container
 {
 	min-width: 320px;	
