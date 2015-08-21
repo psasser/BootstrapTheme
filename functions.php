@@ -88,6 +88,31 @@ function replace_last_nav_item($items, $args) {
 	return substr_replace($items, '', strrpos($items, $args->after), strlen($args->after));
 }
 add_filter('wp_nav_menu','replace_last_nav_item',100,2);
+
+function create_post_type() {
+	register_post_type( 'portfolio',
+		array(
+			'labels' => array(
+				'name' => __( 'Portfolio' ),
+				'singular_name' => __( 'Portfolio' )
+			),
+		'public' => true,
+		'has_archive' => true,
+		'supports' => array( 'title', 'editor', 'thumbnail', 'page-attributes'),
+		'menu_position' => 5,
+		'hierarchical' => true,
+		)
+	);
+	register_taxonomy(
+		'portfolio-cat',
+		'portfolio',
+		array(
+			'label' => __( 'Property Category' ),
+			'hierarchical' => true
+		)
+	);
+}
+//add_action( 'init', 'create_post_type' );
 //End Wordpress Maintenance
 
 
