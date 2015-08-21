@@ -333,3 +333,25 @@ function isCPTView($cpttocheck)
 	}
 }
 //End resuseable code pieces
+
+
+//Setting up Header
+function remove_menu() {
+	remove_action('thematic_header','thematic_brandingopen',1);
+	remove_action('thematic_header','thematic_blogtitle',3);
+	remove_action('thematic_header','thematic_blogdescription',5);
+	remove_action('thematic_header','thematic_brandingclose',7);
+	remove_action('thematic_header','thematic_access',9);
+}
+add_action('init', 'remove_menu');
+//End Setting up Header
+
+
+//Setting up Footer
+function remove_footersiteoptions() {
+	remove_action('thematic_footer','thematic_siteinfoopen',20);
+	remove_action('thematic_footer','thematic_siteinfo',30);
+	remove_action('thematic_footer','thematic_siteinfoclose',40);
+}
+add_action('init', 'remove_footersiteoptions');
+//End Setting up Footer
