@@ -210,48 +210,65 @@ a img.aligncenter {
 /*End maintenance styling */
 
 
+/*Setting up Header*/
+.navtogglearea .navbar-toggle .icon-bar
+{
+	background-color: #ffffff;	
+}
+
+.navtogglearea .navbar-toggle:hover, .navtogglearea .navbar-toggle:focus
+{
+	background-color: #1f1f20;
+}
+
+.navtogglearea .navbar-toggle
+{
+	background-color: #39393b;
+	border: 1px solid #ffffff;
+	margin: 0;
+	margin-left: 10px;
+}
+
+#navbar
+{
+	position: absolute;
+	width: 100%;
+	z-index: 220;
+	background-color: #333333;
+}
+
+.navbar-nav
+{
+	margin-top: 0;	
+	margin-bottom: 0;
+}
+
+.navbar-collapse
+{
+	box-shadow: none;	
+}
+
+.navbar-brand, .navbar-nav>li>a
+{
+	text-shadow: none;
+	color: #ffffff;
+}
+
+.nav>li>a:hover, .nav>li>a:focus
+{
+	color: #000000;	
+}
+/*End Setting up Header*/
 
 
-
-
-/* Extra small devices (phones, less than 768px) */
-/* No media query since this is the default in Bootstrap */
-
-
-
-
-
-
-
-
-
-
-
-/* End extra small media query */
-
-
-
-
-/* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
 	
 }
-/* End Small devices (tablets, 768px and up) */
 
-
-
-
-/* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
 	
 }
-/* End Medium devices (desktops, 992px and up) */
 
-
-
-
-/* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
 
 }
-/* End Large devices (large desktops, 1200px and up) */
