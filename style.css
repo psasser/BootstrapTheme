@@ -207,6 +207,27 @@ a img.aligncenter {
 {
 	clear: both;
 }
+
+@media (min-width: 768px) {
+	.row-height
+	{
+		display: table;
+		table-layout: fixed;
+		height: 100%;
+		width: 100%;
+	}
+	.col-height
+	{
+		display: table-cell;
+		float: none;
+		height: 100%;
+	}
+	.col-middle
+	{
+		vertical-align: middle;
+	}
+}
+
 /*End maintenance styling */
 
 
