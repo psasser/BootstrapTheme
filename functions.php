@@ -55,17 +55,14 @@ add_action('wp_head','metaViewport');
 
 
 //Setting up ACF Options Page
-function my_options_page_settings($options)
-{
-	$options['title'] = __('Theme Options');
-	$options['pages'] = array(
-		__('All Page Content'),
-		__('Social Media')
-	);
+if( function_exists('acf_add_options_page') ) {
 	
-	return $options;
+	acf_add_options_page();
+	
+	acf_add_options_sub_page('All Page Content');
+	acf_add_options_sub_page('Social Media');
+	
 }
-add_filter('acf/options_page/settings', 'my_options_page_settings');
 //End Setting up ACF Options Page
 
 
