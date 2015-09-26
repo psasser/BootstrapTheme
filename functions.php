@@ -120,165 +120,167 @@ function addSocialMedia($style)
 	echo '<ul class="socialmedia">';
 	
 	if( have_rows('social_media_repeater', 'option') ):
-	
-    	while ( have_rows('social_media_repeater', 'option') ) : the_row();
 
-				if(get_sub_field('social_media_type') == 'Twitter')
+    	while ( have_rows('social_media_repeater', 'option') ) : the_row();
+			if(get_sub_field('social_media_link'))
+			{
+				if(get_sub_field('social_media_type') == "Twitter")
 				{
 					if($style == 'rounded')
 					{
-						echo '<li><a href="'.get_field('twitter', 'option').'" class="socialtwitter symbol" title="&#xe486;" target="_blank"></a></li>';
+						echo '<li><a href="'.get_sub_field('social_media_link').'" class="socialtwitter symbol" title="&#xe486;" target="_blank"></a></li>';
 					}
 					else if($style == 'circle')
 					{
-						echo '<li><a href="'.get_field('twitter', 'option').'" class="socialtwitter symbol" title="&#xe286;" target="_blank"></a></li>';
+						echo '<li><a href="'.get_sub_field('social_media_link').'" class="socialtwitter symbol" title="&#xe286;" target="_blank"></a></li>';
 					}
 					else
 					{
-						echo '<li><a href="'.get_field('twitter', 'option').'" class="socialtwitter symbol" title="&#xe086;" target="_blank"></a></li>';	
+						echo '<li><a href="'.get_sub_field('social_media_link').'" class="socialtwitter symbol" title="&#xe086;" target="_blank"></a></li>';	
 					}
 				}
-				if(get_sub_field('social_media_type') == 'Facebook')
+				if(get_sub_field('social_media_type') == "Facebook")
 				{
 					if($style == 'rounded')
 					{
-						echo '<li><a href="'.get_field('facebook', 'option').'" class="socialfacebook symbol" title="&#xe427;" target="_blank"></a></li>';
+						echo '<li><a href="'.get_sub_field('social_media_link').'" class="socialfacebook symbol" title="&#xe427;" target="_blank"></a></li>';
 					}
 					else if($style == 'circle')
 					{
-						echo '<li><a href="'.get_field('facebook', 'option').'" class="socialfacebook symbol" title="&#xe227;" target="_blank"></a></li>';
+						echo '<li><a href="'.get_sub_field('social_media_link').'" class="socialfacebook symbol" title="&#xe227;" target="_blank"></a></li>';
 					}
 					else
 					{
-						echo '<li><a href="'.get_field('facebook', 'option').'" class="socialfacebook symbol" title="&#xe027;" target="_blank"></a></li>';
+						echo '<li><a href="'.get_sub_field('social_media_link').'" class="socialfacebook symbol" title="&#xe027;" target="_blank"></a></li>';
 					}
 				}
-				if(get_sub_field('social_media_type') == 'LinkedIn')
+				if(get_sub_field('social_media_type') == "LinkedIn")
 				{
 					if($style == 'rounded')
 					{
-						echo '<li><a href="'.get_field('linkedin', 'option').'" class="sociallinkedin symbol" title="&#xe452;" target="_blank"></a></li>';
+						echo '<li><a href="'.get_sub_field('social_media_link').'" class="sociallinkedin symbol" title="&#xe452;" target="_blank"></a></li>';
 					}
 					else if($style == 'circle')
 					{
-						echo '<li><a href="'.get_field('linkedin', 'option').'" class="sociallinkedin symbol" title="&#xe252;" target="_blank"></a></li>';
+						echo '<li><a href="'.get_sub_field('social_media_link').'" class="sociallinkedin symbol" title="&#xe252;" target="_blank"></a></li>';
 					}
 					else
 					{
-						echo '<li><a href="'.get_field('linkedin', 'option').'" class="sociallinkedin symbol" title="&#xe052;" target="_blank"></a></li>';
+						echo '<li><a href="'.get_sub_field('social_media_link').'" class="sociallinkedin symbol" title="&#xe052;" target="_blank"></a></li>';
 					}
 				}
-				if(get_sub_field('social_media_type') == 'Pinterest')
+				if(get_sub_field('social_media_type') == "Pinterest")
 				{
 					if($style == 'rounded')
 					{
-						echo '<li><a href="'.get_field('pinterest', 'option').'" class="socialpinterest symbol" title="&#xe464;" target="_blank"></a></li>';
+						echo '<li><a href="'.get_sub_field('social_media_link').'" class="socialpinterest symbol" title="&#xe464;" target="_blank"></a></li>';
 					}
 					else if($style == 'circle')
 					{
-						echo '<li><a href="'.get_field('pinterest', 'option').'" class="socialpinterest symbol" title="&#xe264;" target="_blank"></a></li>';
+						echo '<li><a href="'.get_sub_field('social_media_link').'" class="socialpinterest symbol" title="&#xe264;" target="_blank"></a></li>';
 					}
 					else
 					{
-						echo '<li><a href="'.get_field('pinterest', 'option').'" class="socialpinterest symbol" title="&#xe064;" target="_blank"></a></li>';
+						echo '<li><a href="'.get_sub_field('social_media_link').'" class="socialpinterest symbol" title="&#xe064;" target="_blank"></a></li>';
 					}
 				}
-				if(get_sub_field('social_media_type') == 'RSS Feed')
+				if(get_sub_field('social_media_type') == "RSS Feed")
 				{
 					if($style == 'rounded')
 					{
-						echo '<li><a href="'.get_field('rss_feed', 'option').'" class="socialrss symbol" title="&#xe471;" target="_blank"></a></li>';
+						echo '<li><a href="'.get_sub_field('social_media_link').'" class="socialrss symbol" title="&#xe471;" target="_blank"></a></li>';
 					}
 					else if($style == 'circle')
 					{
-						echo '<li><a href="'.get_field('rss_feed', 'option').'" class="socialrss symbol" title="&#xe271;" target="_blank"></a></li>';
+						echo '<li><a href="'.get_sub_field('social_media_link').'" class="socialrss symbol" title="&#xe271;" target="_blank"></a></li>';
 					}
 					else
 					{
-						echo '<li><a href="'.get_field('rss_feed', 'option').'" class="socialrss symbol" title="&#xe071;" target="_blank"></a></li>';
+						echo '<li><a href="'.get_sub_field('social_media_link').'" class="socialrss symbol" title="&#xe071;" target="_blank"></a></li>';
 					}
 				}
-				if(get_sub_field('social_media_type') == 'YouTube')
+				if(get_sub_field('social_media_type') == "YouTube")
 				{
 					if($style == 'rounded')
 					{
-						echo '<li><a href="'.get_field('youtube', 'option').'" class="socialyoutube symbol" title="&#xe499;" target="_blank"></a></li>';
+						echo '<li><a href="'.get_sub_field('social_media_link').'" class="socialyoutube symbol" title="&#xe499;" target="_blank"></a></li>';
 					}
 					else if($style == 'circle')
 					{
-						echo '<li><a href="'.get_field('youtube', 'option').'" class="socialyoutube symbol" title="&#xe299;" target="_blank"></a></li>';
+						echo '<li><a href="'.get_sub_field('social_media_link').'" class="socialyoutube symbol" title="&#xe299;" target="_blank"></a></li>';
 					}
 					else
 					{
-						echo '<li><a href="'.get_field('youtube', 'option').'" class="socialyoutube symbol" title="&#xe099;" target="_blank"></a></li>';
+						echo '<li><a href="'.get_sub_field('social_media_link').'" class="socialyoutube symbol" title="&#xe099;" target="_blank"></a></li>';
 					}
 				}
-				if(get_sub_field('social_media_type') == 'Google Plus')
+				if(get_sub_field('social_media_type') == "Google Plus")
 				{
 					if($style == 'rounded')
 					{
-						echo '<li><a href="'.get_field('google_plus', 'option').'" class="socialgoogleplus symbol" title="&#xe439;" target="_blank"></a></li>';
+						echo '<li><a href="'.get_sub_field('social_media_link').'" class="socialgoogleplus symbol" title="&#xe439;" target="_blank"></a></li>';
 					}
 					else if($style == 'circle')
 					{
-						echo '<li><a href="'.get_field('google_plus', 'option').'" class="socialgoogleplus symbol" title="&#xe239;" target="_blank"></a></li>';
+						echo '<li><a href="'.get_sub_field('social_media_link').'" class="socialgoogleplus symbol" title="&#xe239;" target="_blank"></a></li>';
 					}
 					else
 					{
-						echo '<li><a href="'.get_field('google_plus', 'option').'" class="socialgoogleplus symbol" title="&#xe039;" target="_blank"></a></li>';
+						echo '<li><a href="'.get_sub_field('social_media_link').'" class="socialgoogleplus symbol" title="&#xe039;" target="_blank"></a></li>';
 					}
 				}
-				if(get_sub_field('social_media_type') == 'Vimeo')
+				if(get_sub_field('social_media_type') == "Vimeo")
 				{
 					if($style == 'rounded')
 					{
-						echo '<li><a href="'.get_field('vimeo', 'option').'" class="socialvimeo symbol" title="&#xe489;" target="_blank"></a></li>';
+						echo '<li><a href="'.get_sub_field('social_media_link').'" class="socialvimeo symbol" title="&#xe489;" target="_blank"></a></li>';
 			
 					}
 					else if($style == 'circle')
 					{
-						echo '<li><a href="'.get_field('vimeo', 'option').'" class="socialvimeo symbol" title="&#xe289;" target="_blank"></a></li>';
+						echo '<li><a href="'.get_sub_field('social_media_link').'" class="socialvimeo symbol" title="&#xe289;" target="_blank"></a></li>';
 					}
 					else
 					{
-						echo '<li><a href="'.get_field('vimeo', 'option').'" class="socialvimeo symbol" title="&#xe089;" target="_blank"></a></li>';
+						echo '<li><a href="'.get_sub_field('social_media_link').'" class="socialvimeo symbol" title="&#xe089;" target="_blank"></a></li>';
 					}
 				}
-				if(get_sub_field('social_media_type') == 'Email')
+				if(get_sub_field('social_media_type') == "Email")
 				{
 					if($style == 'rounded')
 					{
-						echo '<li><a href="mailto:'.get_field('email', 'option').'" class="email symbol" title="&#xe424;" target="_blank"></a></li>';
+						echo '<li><a href="mailto:'.get_sub_field('social_media_link').'" class="email symbol" title="&#xe424;" target="_blank"></a></li>';
 					}
 					else if($style == 'circle')
 					{
-						echo '<li><a href="mailto:'.get_field('email', 'option').'" class="email symbol" title="&#xe224;" target="_blank"></a></li>';
+						echo '<li><a href="mailto:'.get_sub_field('social_media_link').'" class="email symbol" title="&#xe224;" target="_blank"></a></li>';
 					}
 					else
 					{
-						echo '<li><a href="mailto:'.get_field('email', 'option').'" class="email symbol" title="&#xe024;" target="_blank"></a></li>';
+						echo '<li><a href="mailto:'.get_sub_field('social_media_link').'" class="email symbol" title="&#xe024;" target="_blank"></a></li>';
 					}
 				}
-				if(get_sub_field('social_media_type') == 'Instagram')
+				if(get_sub_field('social_media_type') == "Instagram")
 				{
 					if($style == 'rounded')
 					{
-						echo '<li><a href="'.get_field('instagram', 'option').'" class="instagram symbol" title="&#xe500;" target="_blank"></a></li>';
+						echo '<li><a href="'.get_sub_field('social_media_link').'" class="instagram symbol" title="&#xe500;" target="_blank"></a></li>';
 					}
 					else if($style == 'circle')
 					{
-						echo '<li><a href="'.get_field('instagram', 'option').'" class="instagram symbol" title="&#xe300;" target="_blank"></a></li>';
+						echo '<li><a href="'.get_sub_field('social_media_link').'" class="instagram symbol" title="&#xe300;" target="_blank"></a></li>';
 					}
 					else
 					{
-						echo '<li><a href="'.get_field('instagram', 'option').'" class="instagram symbol" title="&#xe100;" target="_blank"></a></li>';
+						echo '<li><a href="'.get_sub_field('social_media_link').'" class="instagram symbol" title="&#xe100;" target="_blank"></a></li>';
 					}
 				}
-	
+			}
+			
 		endwhile;
 	
 	endif;
-
+	
 	echo '</ul>';
 }
 
