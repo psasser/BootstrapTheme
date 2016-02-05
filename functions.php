@@ -110,6 +110,11 @@ function create_post_type() {
 	);
 }
 //add_action( 'init', 'create_post_type' );
+
+function yearshortcode( $atts ) {
+	return date('Y');
+}
+add_shortcode( 'year', 'yearshortcode' );
 //End Wordpress Maintenance
 
 

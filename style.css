@@ -1,5 +1,5 @@
 /*   
-Theme Name: A Thematic Child Theme
+Theme Name: MO Press Services Theme
 Theme URI: http://thematictheme.com/
 Description: Use this theme to start your Thematic Child Theme development.
 Author: Patrick Sasser
@@ -16,6 +16,8 @@ This work, like WordPress, is released under GNU General Public License, version
 .
 
 */
+
+@import url("css/main.css");
 
 /*Maintenance styling */
 body
@@ -51,7 +53,8 @@ body
 .video-container {
     position: relative;
     padding-bottom: 56.25%;
-    padding-top: 30px; height: 0; overflow: hidden;
+	height: 0;
+	overflow: hidden;
 }
  
 .video-container iframe,
@@ -208,6 +211,11 @@ a img.aligncenter {
 	clear: both;
 }
 
+.nopadding
+{
+	padding: 0;
+}
+
 @media (min-width: 768px) {
 	.row-height
 	{
@@ -229,67 +237,3 @@ a img.aligncenter {
 }
 
 /*End maintenance styling */
-
-
-/*Setting up Header*/
-.navtogglearea .navbar-toggle .icon-bar
-{
-	background-color: #ffffff;	
-}
-
-.navtogglearea .navbar-toggle:hover, .navtogglearea .navbar-toggle:focus
-{
-	background-color: #1f1f20;
-}
-
-.navtogglearea .navbar-toggle
-{
-	background-color: #39393b;
-	border: 1px solid #ffffff;
-	margin: 0;
-	margin-left: 10px;
-}
-
-#navbar
-{
-	position: absolute;
-	width: 100%;
-	z-index: 220;
-	background-color: #333333;
-}
-
-.navbar-nav
-{
-	margin-top: 0;	
-	margin-bottom: 0;
-}
-
-.navbar-collapse
-{
-	box-shadow: none;	
-}
-
-.navbar-brand, .navbar-nav>li>a
-{
-	text-shadow: none;
-	color: #ffffff;
-}
-
-.nav>li>a:hover, .nav>li>a:focus
-{
-	color: #000000;	
-}
-/*End Setting up Header*/
-
-
-@media (min-width: 768px) {
-	
-}
-
-@media (min-width: 992px) {
-	
-}
-
-@media (min-width: 1200px) {
-
-}
