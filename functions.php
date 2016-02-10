@@ -69,7 +69,9 @@ if( function_exists('acf_add_options_page') ) {
 
 //Wordpress Mainteanance
 function my_embed_oembed_html($html, $url, $attr, $post_id) {
-  return '<div class="video-container">' . $html . '</div>';
+	$newtext = '<div class="video-container">' . $html . '</div>'; //Make it responsive
+	$newtext = str_replace( '?feature=oembed', '?feature=oembed&rel=0', $newtext ); //Remove suggested links
+	return $newtext;
 }
 add_filter('embed_oembed_html', 'my_embed_oembed_html', 99, 4);
 
