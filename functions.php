@@ -19,7 +19,6 @@
 /*
 define('WP_HOME', 'http://' . $_SERVER['HTTP_HOST']);
 define('WP_SITEURL', 'http://' . $_SERVER['HTTP_HOST']);
-add_filter( 'auto_update_plugin', '__return_true' );
 */
 /*End Stuff to Add to WP Config*/
 
@@ -124,6 +123,8 @@ function yearshortcode( $atts ) {
 	return date('Y');
 }
 add_shortcode( 'year', 'yearshortcode' );
+
+add_filter( 'auto_update_plugin', '__return_true' );
 //End Wordpress Maintenance
 
 
