@@ -15,6 +15,13 @@
  */
 
 
+/*Stuff to Add to WP Config*/
+/*
+define('WP_HOME', 'http://' . $_SERVER['HTTP_HOST']);
+define('WP_SITEURL', 'http://' . $_SERVER['HTTP_HOST']);
+add_filter( 'auto_update_plugin', '__return_true' );
+*/
+/*End Stuff to Add to WP Config*/
 
 //get rid of some of the widgets that we don't need
 function remove_some_widgets(){
