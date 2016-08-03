@@ -22,6 +22,8 @@ define('WP_SITEURL', 'http://' . $_SERVER['HTTP_HOST']);
 */
 /*End Stuff to Add to WP Config*/
 
+add_theme_support( 'thematic_html5' );
+
 //get rid of some of the widgets that we don't need
 function remove_some_widgets(){
 
@@ -62,12 +64,9 @@ add_action('wp_head','metaViewport');
 
 //Setting up ACF Options Page
 if( function_exists('acf_add_options_page') ) {
-	
 	acf_add_options_page();
-	
 	acf_add_options_sub_page('All Page Content');
-	acf_add_options_sub_page('Social Media');
-	
+	acf_add_options_sub_page('Social Media');	
 }
 //End Setting up ACF Options Page
 
@@ -379,3 +378,38 @@ function remove_footersiteoptions() {
 }
 add_action('init', 'remove_footersiteoptions');
 //End Setting up Footer
+
+
+//Setting up Template Options
+function addingTemplateStuff()
+{
+	if( have_rows('template_creator') ):
+
+		 // loop through the rows of data
+		while ( have_rows('template_creator') ) : the_row();
+	
+			if( get_row_layout() == 'slideshow' ):
+			
+			elseif( get_row_layout() == 'call_to_action' ) :
+			
+			elseif( get_row_layout() == 'countdown_area' ): 
+			
+			elseif( get_row_layout() == 'glyphicon_teaser_area' ):
+			 
+			elseif( get_row_layout() == 'large_title_area_with_text_on_the_right' ): 
+			
+			elseif( get_row_layout() == 'number_counter_area' ): 
+			
+			elseif( get_row_layout() == 'collapsible_panel_section' ): 
+			
+			elseif( get_row_layout() == 'large_divider_image' ): 
+			
+			elseif( get_row_layout() == 'simple_text_section' ): 
+			
+			endif;
+	
+		endwhile;
+	
+	endif;	
+}
+//End Setting up Template Options
